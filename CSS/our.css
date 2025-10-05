@@ -1,0 +1,266 @@
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #555;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #555;
+        }
+
+ 
+
+ .page-title {
+            color: #007bff; /* Blue color for title */
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        /* --- Header Image --- */
+        .story-header-img {
+            width: 100%;
+            height: 450px; /* Large height for impact */
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* --- Main Narrative Section --- */
+        .main-narrative-section {
+            padding: 3rem 0;
+        }
+        .vision-text {
+            color: #172d5c; /* Dark blue/navy text */
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .narrative-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        .narrative-list li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .narrative-list li::before {
+            content: '•';
+            color: #007bff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+        }
+        
+        /* --- Two-Column Section: Wise Adventurers --- */
+        .wise-adventurers-section {
+            padding: 3rem 0;
+            background-color: #f0f8ff; /* Light blue background for visual break */
+        }
+        .adventurer-img-wrapper {
+            padding: 0 15px;
+        }
+        .adventurer-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .adventurer-text {
+            padding: 20px;
+        }
+        .adventurer-title {
+            color: #172d5c; 
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        /* --- Two-Column Section: Access to Clean Water (Charity) --- */
+        .charity-section {
+            padding: 3rem 0;
+        }
+        .charity-title {
+            color: #172d5c;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .charity-img-wrapper {
+            padding: 0 15px;
+        }
+        .charity-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        /* --- Stats Bar Section --- */
+        .stats-bar-section {
+            background-color: #007bff; /* Blue background */
+            color: #ffffff;
+            padding: 2rem 0;
+        }
+        .stat-item {
+            text-align: center;
+            font-size: 1rem;
+            padding: 10px;
+        }
+        .stat-item p {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+             .contact-header-image {
+                height: 250px;
+                margin-bottom: 2rem;
+            }
+             .story-header-img {
+                height: 250px;
+            }
+            .page-title {
+                font-size: 1.8rem;
+            }
+            .vision-text {
+                font-size: 1.3rem;
+            }
+            /* Reverse column order on mobile for better flow in the first 2-col section */
+            .wise-adventurers-section .row {
+                flex-direction: column-reverse; 
+            }
+            .adventurer-img {
+                height: 300px;
+                margin-bottom: 1.5rem;
+            }
+            .adventurer-text, .charity-text {
+                padding: 0 15px;
+                margin-bottom: 1.5rem;
+            }
+            .info-text-wrapper {
+                text-align: center;
+                order: 1; /* Puts text below the graphic on mobile for a better flow */
+            }
+            .contact-us-graphic {
+                order: 0; /* Puts graphic above the text on mobile */
+                margin-bottom: 1.5rem;
+            }
+            .info-title {
+                margin-top: 1rem;
+            }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    

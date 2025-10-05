@@ -1,0 +1,336 @@
+   /* --- General Styling --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; 
+        }
+        
+        /* --- Header Section Styling --- */
+        .faq-header {
+            position: relative;
+            height: 250px; 
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            /* You should replace the placeholder URL with your actual image path */
+            filter: brightness(100%); /* Darkens the image slightly for text readability */
+        }
+        
+        .faq-title {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #2b4391; 
+            background-color: rgb(214, 213, 213);
+            width: 100%;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-top: 20px;
+            
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        /* --- Content Layout --- */
+        .faq-content-container {
+            max-width: 800px; 
+            margin-left: auto;
+            margin-top: 70px;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+        
+        /* --- Accordion Customization --- */
+        .accordion-button {
+            background-color: #fff;
+            color: #333;
+            font-weight: 600;
+            padding: 1.25rem;
+            border: none;
+            text-align: left;
+            /* Flex properties for question text and icon spacing */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Hide Bootstrap's default icon and style the custom one */
+        .accordion-button::after {
+            display: none;
+        }
+        
+        /* Style the custom '+' / '-' icon */
+        .faq-icon-indicator {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: black; /* Blue for the '+' */
+            transition: transform 0.3s ease;
+        }
+        
+        /* Change the '+' to '-' (by rotating) when the button is open */
+        .accordion-button:not(.collapsed) .faq-icon-indicator {
+            transform: rotate(45deg); /* Rotates the '+' into an 'X', a common design for "close" */
+            color: #dc3545; /* Red/Crimson when open */
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: none;
+            margin-top: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-body {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+          
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #555;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #555;
+        }
+
+        /* --- Hero Carousel Customization --- */
+        .hero-carousel {
+            margin-bottom: 3rem;
+        }
+        .carousel-item img {
+            height: 450px; /* Base height for desktop */
+            object-fit: cover; 
+            width: 100%;
+        }
+        /* Style the blue indicator dots */
+        .carousel-indicators [data-bs-target] {
+            background-color: #007bff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        .carousel-indicators .active {
+            opacity: 1;
+        }
+
+        /* --- Content Block 1 (Two-Column Section) --- */
+        .content-block-1 {
+            margin-bottom: 3rem;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,.05);
+            height: 300px; /* Fixed height for visual consistency */
+            display: flex;
+            flex-direction: column;
+        }
+        .content-card-title {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .content-card-body {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        }
+        .content-card-body img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Specific backgrounds matching the image */
+        .original-filtration { background-color: black; }
+        .filtration-tech { background-color: #f0f8ff; }
+
+        /* --- Content Block 2 (Full-Width Info Section) --- */
+        .info-section-bg {
+            background-color: #e0f2ff; /* Light blue background */
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1; 
+            overflow: hidden; 
+        }
+
+        /* Custom wavy shape for the background (using clip-path for the illusion) */
+        .info-section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0f2ff 0%, #d0e7f7 100%);
+            /* Creates a slight wave/oval effect at the edges */
+            clip-path: ellipse(120% 70% at 50% 120%); 
+            z-index: -1; 
+        }
+        .info-section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            padding: 0 15px; 
+        }
+
+        /* --- Content Block 3 (Text and Bottles) --- */
+        .content-block-3 {
+            margin-bottom: 3rem;
+        }
+        .bottles-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .bottles-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-description-text {
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    
+        /* Responsive Adjustments */
+        @media (max-width: 576px) {
+            .faq-header {
+                height: 150px;
+            }
+            .faq-title {
+                font-size: 2rem;
+            }
+        }
+   

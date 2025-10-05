@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete FAQ Section</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+   <link rel="stylesheet" href="CSS/add.css">
+     
+</head>
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar sticky-top">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/index_1__1_-removebg-preview.png" alt="Ec Filter Bottles Logo" class="navbar-brand-logo">
+                <span class="navbar-brand-text">Ec Filter Bottles</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Our.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Tech.html">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav navbar-icons d-none d-lg-flex">
+                    <li class="nav-item"><a class="nav-link" href="Login.html"><i class="bi bi-person"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="Cart.html"><i class="bi bi-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   <main class="product-page">
+
+        <section class="product-details">
+            <h1 class="product-details__title">Large Water Purifier Bottle (25oz / 75cl)</h1>
+            
+            <div class="product-details__content-wrapper">
+                
+                <div class="product-gallery">
+                    <div class="product-gallery__main-image-container">
+                        <img src="images/lightgray.png" alt="Large Water Purifier Bottle" id="main-product-image" class="product-gallery__main-image">
+                    </div>
+                    
+                    <div class="product-gallery__thumbnails">
+                        <img src="images/lightgray.png" alt="Thumbnail 1" class="thumbnail active" data-image="main-large-bottle.jpg" onclick="changeMainImage(this)">
+                        <img src="images/lightgraywithglace.png" alt="Thumbnail 2" class="thumbnail" data-image="side-view.jpg" onclick="changeMainImage(this)">
+                        <img src="images/lightgrayshapewithglace.png" alt="Thumbnail 3" class="thumbnail" data-image="filter-view.jpg" onclick="changeMainImage(this)">
+                        <img src="images/lightgray2bottle.png" alt="Thumbnail 4" class="thumbnail" data-image="package-view.jpg" onclick="changeMainImage(this)">
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <p class="product-info__price">
+                        <span class="product-info__current-price">Rs. 4800/-</span> 
+                        <del class="product-info__old-price">Rs. 5200/-</del>
+                    </p>
+                    <div class="product-info__rating">★★★★★</div>
+                    
+                    <button class="product-info__add-to-cart-button" onclick="addToCartAndRedirect()">
+                        Add to Cart
+                    </button>
+                    
+                    <div class="product-info__features">
+                        <div class="feature-icon">
+                            <i class="icon-delivery"></i>
+                            <span>Pure Water Anywhere</span>
+                        </div>
+                        <div class="feature-icon">
+                            <i class="icon-viruses"></i>
+                            <span>Removes Viruses</span>
+                        </div>
+                        <div class="feature-icon">
+                            <i class="icon-filter"></i>
+                            <span>Long Filter Life</span>
+                        </div>
+                        <div class="feature-icon">
+                            <i class="icon-easy-return"></i>
+                            <span>Fast & Easy</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="product-info__key-points">
+                        <li>Fast 2-3 day delivery for most orders.</li>
+                        <li>Free shipping for all orders</li>
+                        <li>Fast and easy returns</li>
+                    </ul>
+
+                    <ul class="product-info__description-list">
+                        <li><strong>NAMED BEST WATER BOTTLE FOR TRAVEL</strong> by US News & World Report.</li>
+                        <li><strong>MAKES DIRTY WATER SAFE TO DRINK.</strong> Avoid dysentery and travel related disease. Get the assurance of safe water every anywhere.</li>
+                        <li><strong>FILTER VIRUSES.</strong> Most water filter bottles provide no protection from viruses! Water-to-Go filters dangerous viruses as well as bacteria, parasites, chemicals, pesticides, heavy metals, microplastics...</li>
+                        <li><strong>MOST EARTH FRIENDLY BOTTLE AVAILABLE.</strong> Made of bio-sugarcane yet is as durable and machine washable as regular plastic. Reusable. Recyclable. Each filter replaces 400 single-use plastic bottles. Packaging is recycled cardboard printed with vegetable inks.</li>
+                        <li><strong>NO LEAK LIFETIME GUARANTEE.</strong> Our new lid design prevents leaks and we stand by it.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <section class="customer-reviews">
+            <h2 class="customer-reviews__title">What our customer says</h2>
+            
+            <div class="customer-reviews__grid" id="review-grid">
+                <div class="review-card" data-review-id="0">
+                    <h3 class="review-card__name">Kim Twohig</h3>
+                    <div class="review-card__rating">★★★★★</div>
+                    <p class="review-card__text">This product was excellent and with travelling to Africa, had no problems at all and was not concerned about the water in Africa. Perfect for travel</p>
+                </div>
+                </div>
+        </section>
+    </main>
+
+
+     <!--=====FOOTER===========-->
+
+   <footer class="footer-bg-section mt-5 py-5">
+    <div class="container footer-container">
+        <div class="row row-cols-2 row-cols-md-4 g-4 footer-links-row">
+
+            <div class="col footer-column">
+                <h5 class="footer-heading">Quick Links</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">Shop</a></li>
+                    <li><a href="#" class="footer-link">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="col footer-column">
+                <h5 class="footer-heading">Products</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="footer-link">Water Bottles</a></li>
+                    <li><a href="#" class="footer-link">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="col footer-column">
+                <h5 class="footer-heading">Customer Service</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                    <li><a href="#" class="footer-link">Account</a></li>
+                    <li><a href="#" class="footer-link">Cart</a></li>
+                    <li><a href="#" class="footer-link">Tracking Order</a></li>
+                </ul>
+            </div>
+
+            <div class="col footer-column">
+                <h5 class="footer-heading">Policies</h5>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#" class="footer-link">Terms & Condition</a></li>
+                    <li><a href="#" class="footer-link">Accessibility Statement</a></li>
+                    <li><a href="#" class="footer-link">Refund & Return Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 footer-social-icons">
+            <a href="#" class="social-icon-link me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-twitter"></i></a>
+        </div>
+
+        <div class="text-center mt-4 pt-3 border-top copyright-section">
+            <small>&copy; 2025 Ec Filter Bottles. All Rights Reserved</small>
+        </div>
+    </div>
+</footer>
+<script src="JS/contact.js"></script>
+<script src="JS/add.js"></script>
+<script src="JS/addtocart.js"></script>
+<script>
+     function navigateToCheckout() {
+            // This function handles the redirect to the final checkout page
+            window.location.href = 'Cart.html';
+        }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

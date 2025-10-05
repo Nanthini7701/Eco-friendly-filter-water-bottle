@@ -1,0 +1,391 @@
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #007bff;
+        }
+
+ 
+/* Base Styles */
+:root {
+    --color-primary: #007bff; /* Button Blue */
+    --color-tab-active: #007bff; /* Tab highlight */
+    --color-text-dark: #333;
+    --color-text-light: #555;
+    --color-sale: #dc3545; /* Red for sale price */
+    --color-tab-bg: #f0f0f0;
+    --font-family: Arial, sans-serif;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none; /* Used for screen reader text */
+}
+
+/* --- Header Section --- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+   
+}
+
+.header__banner {
+    background-image: url('water-bubbles-bg.jpg'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+     background-color: #103964;
+    width: 50%;
+}
+
+.header__title {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+   
+}
+
+/* Slideshow styles */
+.header__promo-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.header__slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header__slide {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.header__slide.active {
+  opacity: 1;
+  position: relative;
+}
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+/* --- Tab Navigation --- */
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    margin: 30px 0 20px 0;
+    gap: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-text-light);
+    transition: color 0.3s, border-bottom 0.3s;
+    text-transform: uppercase;
+}
+
+.tab-button.active {
+    color: var(--color-tab-active);
+    border-bottom: 3px solid var(--color-tab-active);
+}
+
+.tab-panel {
+    display: block; /* Default state for active panel */
+}
+
+.tab-panel[hidden] {
+    display: none; /* Hide inactive panels */
+}
+
+/* --- Product Grid Layout --- */
+.product-category {
+    margin-bottom: 30px;
+}
+
+.product-category__grid {
+    display: grid;
+    /* Default: 1 column for small screens */
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card__image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Accessories Images (Cartridges, Lids) */
+.product-card__image--accessory {
+    max-width: 50%; /* Smaller images for accessories */
+    margin-top: 20px;
+}
+
+/* Sling Images */
+.product-card__image--sling {
+    max-width: 70%; 
+}
+
+.product-card__name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    /* Fixed height for consistent card size */
+    min-height: 3.2em; 
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+}
+
+.product-card__name--accessory {
+    min-height: 4em; /* Give more space for longer accessory descriptions */
+}
+
+.product-card__price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--color-sale);
+    margin: 5px 0;
+}
+
+.product-card__price del {
+    font-size: 0.7em;
+    color: var(--color-text-light);
+    margin-left: 5px;
+}
+
+.product-card__rating {
+    color: gold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-card__badge {
+    background-color: var(--color-text-dark);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card__button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 90%;
+    margin-top: auto; /* Pushes button to the bottom for consistent alignment */
+    transition: background-color 0.2s ease;
+}
+
+.product-card__button:hover {
+    background-color: #0056b3;
+}
+
+/* Header Desktop Layout */
+@media (min-width: 900px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__banner {
+        width: 60%;
+        height: 300px;
+        padding: 100px 20px;
+        box-sizing: border-box;
+    }
+
+    .header__promo-image {
+        width: 40%;
+        height: 300px;
+        overflow: hidden;
+        max-width: none;
+    }
+
+    .header__promo-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+     .product-category__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tab-button {
+        font-size: 1.8em;
+    }
+}
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+             .product-category__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+             .contact-header-image {
+                height: 250px;
+                margin-bottom: 2rem;
+            }
+            .info-text-wrapper {
+                text-align: center;
+                order: 1; /* Puts text below the graphic on mobile for a better flow */
+            }
+            .contact-us-graphic {
+                order: 0; /* Puts graphic above the text on mobile */
+                margin-bottom: 1.5rem;
+            }
+            .info-title {
+                margin-top: 1rem;
+            }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    

@@ -1,0 +1,179 @@
+      body {
+             font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background as in the image */
+            
+
+        }
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #555;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #555;
+        }
+
+ 
+ .empty-cart-container {
+            text-align: center;
+            padding: 20px;
+            margin: 100px;
+        }
+
+        .empty-cart-message {
+            font-size: 1.5rem; /* Larger font size for the message */
+            font-weight: bold;
+            color: #333; /* Darker text */
+            margin-bottom: 30px; /* Space between message and emoji */
+        }
+
+        .sad-face-emoji {
+            font-size: 6rem; /* Large size for the emoji */
+            line-height: 1; /* Ensure emoji sits correctly */
+            display: inline-block; /* Essential for applying transform */
+            color: #333; /* Dark color for the emoji as in the image */
+            
+            /* Animation properties */
+            animation: bounce 2s infinite ease-in-out;
+            /* Animation name, duration, loop forever, easing function */
+        }
+
+        /* Define the bounce animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Start and end at original position */
+            }
+            50% {
+                transform: translateY(-15px); /* Move up 15px at halfway point */
+            }
+        }
+
+
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+             .contact-header-image {
+                height: 250px;
+                margin-bottom: 2rem;
+            }
+              .empty-cart-message {
+                font-size: 1.2rem;
+            }
+            .sad-face-emoji {
+                font-size: 4rem;
+            }
+            .info-text-wrapper {
+                text-align: center;
+                order: 1; /* Puts text below the graphic on mobile for a better flow */
+            }
+            .contact-us-graphic {
+                order: 0; /* Puts graphic above the text on mobile */
+                margin-bottom: 1.5rem;
+            }
+            .info-title {
+                margin-top: 1rem;
+            }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    

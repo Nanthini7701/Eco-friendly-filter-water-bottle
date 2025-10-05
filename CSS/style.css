@@ -1,0 +1,755 @@
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #007bff;
+        }
+
+        /* --- Hero Carousel Customization --- */
+       
+        .carousel-item img {
+            height: 450px; /* Base height for desktop */
+            object-fit: cover; 
+            width: 100%;
+        }
+        /* Style the blue indicator dots */
+        .carousel-indicators [data-bs-target] {
+            background-color: #007bff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        .carousel-indicators .active {
+            opacity: 1;
+        }
+
+        /* --- Content Block 1 (Two-Column Section) --- */
+        .content-block-1 {
+            margin-bottom: 3rem;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,.05);
+            height: 300px; /* Fixed height for visual consistency */
+            display: flex;
+            flex-direction: column;
+        }
+        .content-card-title {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .content-card-body {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        }
+        .content-card-body img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Specific backgrounds matching the image */
+        .original-filtration { background-color: black; }
+        .filtration-tech { background-color: #f0f8ff; }
+
+        /* --- Content Block 2 (Full-Width Info Section) --- */
+        .info-section-bg {
+            background-color: #e0f2ff; /* Light blue background */
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1; 
+            overflow: hidden; 
+        }
+
+        /* Custom wavy shape for the background (using clip-path for the illusion) */
+        .info-section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0f2ff 0%, #d0e7f7 100%);
+            /* Creates a slight wave/oval effect at the edges */
+            clip-path: ellipse(120% 70% at 50% 120%); 
+            z-index: -1; 
+        }
+        .info-section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            padding: 0 15px; 
+        }
+
+        /* --- Content Block 3 (Text and Bottles) --- */
+        .content-block-3 {
+            margin-bottom: 3rem;
+        }
+        .bottles-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .bottles-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-description-text {
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        /* --- HERO CAROUSEL CSS --- */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    /* Set a height or let the image define it */
+
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+   /* Hide by default */
+    transition: opacity 1.3s; /* Small transition for a cleaner look than a jarring pop */
+}
+
+.hero-image.active-image {
+    position: relative; /* Take up space in the flow */
+    opacity: 1; /* Show the active image */
+    z-index: 1;
+}
+
+/* Indicators Styling (optional but good for showing progress) */
+.carousel-indicators {
+    position: absolute;
+    top: 90%;
+    bottom: 20px;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active-indicator {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* --- ORIGINAL FILTRATION CAROUSEL CSS --- */
+.original-carousel {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Example height - adjust to fit content */
+    overflow: hidden;
+}
+
+.original-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* Stack images */
+    top: 0;
+    left: 0;
+  /* Hide by default */
+    transition: opacity 1.3s; 
+}
+
+.original-image.active-original-image {
+    position: relative; /* Take up space in the flow */
+    opacity: 1; /* Show the active image */
+    z-index: 1;
+}
+/* General container for centering content and responsiveness */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ .main-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Section 1 */
+    .top-section {
+     width: 100%;
+      color: #fff;
+      padding: 20px;
+      text-align: left;
+        display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+      justify-content: space-around;
+      margin-left: 30px;
+    }
+.top-section .top-con{
+    width: 80%;
+     background: #0e6ba8;
+     padding: 30px;
+     border-top-right-radius: 300px;
+}
+    .top-section img {
+      max-width: 150px;
+      margin-top: 20px;
+    }
+.middle-section .top-con{
+   padding: 30px;
+   padding-left: 100px;
+    width: 80%;
+     background: #0e6ba8;
+    
+     border-top-left-radius: 300px;
+}
+    /* Section 2 */
+    .middle-section {
+         margin-left: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+      justify-content: space-around;
+     
+      color: #fff;
+      padding: 20px ;
+      width: 100%;
+      text-align: left;
+    }
+
+    .middle-section img {
+      max-width: 180px;
+    }
+
+    /* Section 3 */
+    .feature-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 40px 20px;
+     
+    }
+
+    .feature-text {
+      flex: 1;
+      min-width: 500px;
+      padding: 40px; 
+      background: #0e6ba8;
+      border-radius: 10px
+    }
+
+    .feature-text ul {
+      list-style: disc;
+     color: white;
+      padding: 0;
+    }
+
+    .feature-text ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .feature-text ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0e6ba8;
+      font-size: 20px;
+    }
+
+    .feature-image {
+      
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+    .feature-image img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+.feature-section1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 40px ;
+     
+    }
+    /* Auto Slider Section */
+    .slider-section {
+      margin-left: 50px;
+     
+      width: 550px;
+      position: relative;
+      margin-left: 20px;
+    }
+
+    .slide-img {
+      display: none;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    .active-slide {
+      display: block;
+    }
+
+    /* Sale Section */
+    .sale-section {
+      text-align: center;
+      background: #03254c;
+      color: #fff;
+      width: 100%;
+      height: 300px;
+      padding: 40px 20px;
+    }
+
+    .sale-section button {
+      margin-top: 15px;
+      background: #fff;
+      color: #03254c;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .sale-section button:hover {
+      background: #0e6ba8;
+      color: #fff;
+    }
+
+/* --- Section 3: Mission Statement (Curved Background) --- */
+.mission-statement-section {
+    padding-top: 50px; /* Space above the curve */
+}
+
+.curved-background-wrapper {
+    /* The core element for the curved effect */
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    padding: 50px 0 100px 0; /* Adjust padding for content and curve depth */
+    position: relative;
+    z-index: 1; /* Keep content above the potential curve overflow */
+}
+
+/* The radius effect is applied to the bottom of the content area.
+   This uses a pseudo-element to create a large curved shape that
+   is *outside* the main element, creating the effect seen in the image. */
+.curved-background-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -150px; /* Moves the curve down */
+    left: 0;
+    right: 0;
+    height: 300px; /* Height of the curved shape */
+    background-color: #007bff; /* Must match the wrapper color */
+    /* This creates the massive rounded corners */
+    border-radius: 0 0 50% 50% / 0 0 100px 100px; /* Horizontal / Vertical radius */
+    z-index: -1; /* Place behind the content */
+}
+
+.content-and-bottles {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    gap: 20px;
+}
+
+/* ======================================= */
+/* 1. SWISS ENGINEERED SECTION STYLING (Curved Background) */
+/* ======================================= */
+
+:root {
+    --ec-blue: #007bff; /* Use your brand blue */
+    --ec-light-gray: #f8f9fa; 
+}
+
+/* The wrapper from the previous section is reused here */
+.lower-radius-wrapper {
+    background-color: var(--ec-blue);
+    color: white;
+}
+
+/* Modifier for a less severe curve on the bottom section (swiss engineered) */
+.lower-radius-wrapper::after {
+    /* Less aggressive border-radius for a smoother curve */
+    border-radius: 0 0 300px 300px / 0 0 30px 30px !important;
+    transform: translateY(calc(100% - 50px)) !important; /* Less drop */
+}
+
+.swiss-content-bottles {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    text-align: center; 
+}
+
+.left-bottles {
+    order: -1; /* Move image above text on mobile */
+    max-width: 250px;
+    margin-bottom: 2rem;
+}
+.swiss-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* ======================================= */
+/* 2. TECH SPECS SECTION STYLING */
+/* ======================================= */
+.bg-light-gray {
+    background-color: var(--ec-light-gray);
+}
+.tech-specs-container {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 3rem;
+}
+
+.spec-list {
+    padding-left: 0;
+}
+.spec-item {
+    border-left: 3px solid var(--ec-blue);
+    padding-left: 15px;
+    margin-left: 0;
+}
+
+.specs-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: left;
+}
+.spec-highlight {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+.spec-value {
+    font-size: 0.85rem;
+    color: #666;
+}
+/* ======================================= */
+/* 3. FOOTER/SALE CAROUSEL STYLING */
+/* ======================================= */
+.bottom-carousel-container {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Sale Banner Block */
+.sale-banner-block {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.sale-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sale-shop-btn {
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+}
+
+/* End Bottles Carousel (for auto-changing) */
+.end-bottles-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Constrain size */
+    height: 300px; /* Define height */
+    overflow: hidden;
+}
+
+.end-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Contain ensures full bottle is visible */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.05s; /* Quick transition for the slide */
+}
+
+.end-image.active-end-image {
+    opacity: 1;
+    z-index: 1;
+}
+
+.review-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .review-section h2 {
+      font-size: 28px;
+      color: #1463f3;
+      margin-bottom: 20px;
+    }
+
+    .review-slider {
+      max-width: 1000px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .review-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .review-card {
+      background: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .review-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .review-stars {
+      color: gold;
+      margin: 5px 0;
+    }
+
+    .review-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    justify-content: space-around;
+    gap: 50px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+/* Desktop Layout for Swiss Engineered */
+@media (min-width: 992px) {
+    .swiss-content-bottles {
+        flex-direction: row; /* Side-by-side on desktop */
+        text-align: left;
+    }
+    .left-bottles {
+        order: initial; /* Reset order to left side */
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+     .review-card {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+      }
+      .tech-specs-container {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .tech-bullet-points {
+        flex: 2; /* Give bullet points more space */
+    }
+    .product-details-block {
+        flex: 1; /* Keep product block tighter */
+    }
+     .bottom-carousel-container {
+        flex-direction: row; 
+        justify-content: space-around;
+    }
+    .sale-banner-block {
+        max-width: 45%; 
+    }
+}
+
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+            .middle-section {
+        flex-direction: column;
+      }
+       .review-card {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .feature-section {
+        flex-direction: column;
+      }
+             .content-and-bottles {
+        flex-direction: row; /* Side-by-side on desktop */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .text-content {
+        flex: 3; /* Give text more space */
+    }
+    .bottle-images {
+        flex: 1; /* Give bottles less space */
+    }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    

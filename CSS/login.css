@@ -1,0 +1,369 @@
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Navbar Customization --- */
+        .custom-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .navbar-brand-logo {
+            height: 40px; 
+            margin-right: 10px;
+        }
+        .navbar-brand-text {
+            color: #007bff;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #555;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+        .navbar-icons .nav-link {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            color: #555;
+        }
+
+ 
+/* Base Styles */
+:root {
+    --color-primary-blue: #007bff;
+    --color-text-dark: #333;
+    --color-text-light: #6c757d;
+    --color-border: #ddd;
+    --color-logo-blue: #4fa8e2; /* Color of the tap/globe icon */
+    --font-family: Arial, sans-serif;
+}
+
+
+
+.auth-page-container {
+    display: flex;
+     
+   
+    flex-direction: column; /* Stacked on mobile by default */
+    width: 90%;
+    max-width: 1200px; /* Max width for the entire container */
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* --- Left Column: Visual/Logo --- */
+.login-visual-column {
+    background-color: white; /* Match background for seamless look */
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1; /* Visual remains on top on mobile */
+    min-height: 250px;
+   
+}
+
+.logo-wrapper {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder Styling for the Logo Icon and Text */
+.water-system-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tap-globe-svg {
+    /* Since we don't have the SVG, we use this class as a placeholder. */
+    /* Assuming the SVG is imported, its width/height would be set here. */
+    width: 100%; 
+    max-width: 200px;
+    height: auto;
+    color: var(--color-logo-blue); 
+}
+
+.logo-text-arc {
+    /* Styling to simulate the text curved around the globe, if not part of the SVG */
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--color-logo-blue);
+    transform-origin: center;
+    /* This is an approximation of the curved text */
+    text-align: center;
+   
+    padding: 10px 0;
+}
+
+
+/* --- Right Column: Form --- */
+.login-form-column {
+    padding: 40px 30px;
+    order: 2;
+    text-align: center;
+}
+
+.form-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+}
+
+/* CTA Button - Primary Action */
+.cta-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: white;
+    display: block;
+    box-sizing: border-box;
+}
+
+.cta-button--primary {
+    background-color: var(--color-primary-blue);
+    margin-bottom: 30px;
+}
+
+.cta-button--primary:hover {
+    background-color: #0056b3;
+}
+
+/* Separator for "LOGIN" */
+.form-section-separator {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.separator-text {
+    background: white;
+    padding: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    z-index: 2;
+    position: relative;
+}
+
+.form-section-separator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--color-border);
+    z-index: 1;
+}
+
+/* Form Styling */
+.login-form {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.form-input {
+    width: 100%;
+    max-width: 300px; /* Constrain input width for cleaner look */
+    padding: 12px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    text-align: center; /* Input placeholder text is centered */
+    margin: 0 auto;
+}
+
+.forgot-password-link {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+    color: var(--color-primary-blue);
+}
+
+.cta-button--submit {
+    background-color: var(--color-primary-blue);
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+        /*=======FOOTER============*/
+
+        /* --- FOOTER STYLING --- */
+
+.footer-bg-section {
+    /* Set the background image and color matching the uploaded image */
+    background-image: url('C:\Users\hari\OneDrive\Desktop\Eco friendly filter\images\water.png'); /* Replace with your image path */
+    background-color: #004d66; /* Dark teal fallback color */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer-container {
+    max-width: 1200px; /* Constrain content width */
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block; /* Makes the entire link area clickable */
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ade8f4; /* Light blue on hover */
+}
+
+/* Social Icons */
+.social-icon-link {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+    color: #ade8f4;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter separator line */
+}
+
+
+        /* --- Responsive adjustments --- */
+        @media (max-width: 767.98px) {
+            .carousel-item img {
+                height: 250px; /* Shorter height for mobile carousel */
+            }
+            .content-card {
+                height: 250px; 
+                margin-bottom: 1rem; 
+            }
+            .info-section-bg {
+                padding: 2.5rem 0;
+            }
+            .navbar-brand-text {
+                font-size: 1.2rem; 
+            }
+             .contact-header-image {
+                height: 250px;
+                margin-bottom: 2rem;
+            }
+             .auth-page-container {
+        flex-direction: row; /* Side-by-side on desktop */
+        height: 550px; 
+    }
+    
+    .login-visual-column {
+        flex: 1;
+        order: 1; /* Left side */
+    }
+
+    .login-form-column {
+        flex: 1;
+        order: 2; /* Right side */
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .form-input {
+        max-width: 100%; /* Use full width of the column */
+        text-align: left; /* Input placeholder text aligns left */
+    }
+    
+    .forgot-password-link {
+        text-align: right;
+        padding-right: 5px;
+    }
+    
+    .cta-button--submit {
+        max-width: 100%;
+    }
+            .info-text-wrapper {
+                text-align: center;
+                order: 1; /* Puts text below the graphic on mobile for a better flow */
+            }
+            .contact-us-graphic {
+                order: 0; /* Puts graphic above the text on mobile */
+                margin-bottom: 1.5rem;
+            }
+            .info-title {
+                margin-top: 1rem;
+            }
+              .footer-bg-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .footer-column {
+        /* Puts 2 columns per row on small devices (using row-cols-2) */
+        text-align: left; 
+    }
+        }
+    
